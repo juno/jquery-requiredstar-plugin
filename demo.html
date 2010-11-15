@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Required Star Plugin Demo</title>
+    <style>
+body {
+    background-color: #eee;
+    color: #333;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px auto;
+    width: 60%;
+}
+
+a, a:link, a:visited {
+    color: #000;
+}
+a:hover {
+    color: #999;
+}
+
+p {
+    color: #666;
+    font: normal 40rmal 400 20px/18px Arial, Helvetica, sans-serif;
+    margin: 20px 0 30px;
+}
+
+h1 {
+    font: normal normal 300 40px/40px Arial, Helvetica, sans-serif;
+    letter-spacing: -2px;
+    text-shadow: white 0px 1px 0px;
+}
+
+h2 {
+    font: normal normal 300 30px/28px Arial, Helvetica, sans-serif;
+    margin: 0 0 20px 0;
+    text-shadow: white 0px 1px 0px;
+}
+
+section {
+    margin: 0 0 40px 0;
+    padding: 0;
+}
+
+section.markup code strong {
+    color: #ff3c34;
+}
+
+fieldset {
+    background-color: #fff;
+    border: none;
+    border-radius: 6px;
+    margin: 0;
+    padding: 10px 30px;
+    -moz-border-radius: 6px;
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 3px rgba(73, 167, 219, 0.5), 0 0 30px rgba(73, 167, 219, 0.5);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 1px 2px, rgba(73, 167, 219, 0.496094) 0px 0px 3px, rgba(73, 167, 219, 0.496094) 0px 0px 30px;
+}
+
+label {
+    display: block;
+}
+
+input[type=text] {
+    border: 1px solid #bbb;
+    border-bottom-color: #ddd;
+    border-right-color: #ddd;
+    padding: 5px;
+}
+
+/* styles for plugin */
+input[type=text].required {
+    background: white url(required_star.png) no-repeat 100% 50%;
+}
+
+input[type=text].valid {
+    background: none;
+}
+    </style>
+  </head>
+
+  <body>
+    <h1>jQuery Required Star Plugin Demo</h1>
+
+    <p>Check out <a href="http://github.com/juno/jquery-requiredstar-plugin">the jQuery Required Star Plugin project page on GitHub</a>.</p>
+
+
+    <section class="example">
+      <h2>Example</h2>
+      <form action="#" method="get">
+        <fieldset>
+          <p>
+            <label for="name-field">Name (Required)</label>
+            <input id="name-field" name="name" type="text" class="required" />
+          </p>
+
+          <p>
+            <label for="email-field">E-mail (Required)</label>
+            <input id="email-field" name="email" type="text" class="required" />
+          </p>
+
+          <p>
+            <label for="age-field">Age (Not Required)</label>
+            <input id="age-field" name="age" type="text" />
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+
+    <section class="code">
+      <h2>Code</h2>
+      <pre><code>$(function() {
+  $('input').requiredStar();
+
+  // You can specify the requiredClass and validClass.
+  // $('input').requiredStar({ requiredClass: 'required', validClass: 'valid' });
+});</code></pre>
+    </section>
+
+
+    <section class="markup">
+      <h2>Markup</h2>
+<pre><code>&lt;form action=&quot;#&quot; method=&quot;get&quot;&gt;
+  &lt;fieldset&gt;
+    &lt;p&gt;
+      &lt;label for=&quot;name-field&quot;&gt;Name (Required)&lt;/label&gt;
+      &lt;input id=&quot;name-field&quot; name=&quot;name&quot; type=&quot;text&quot; <strong>class=&quot;required&quot;</strong> /&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      &lt;label for=&quot;email-field&quot;&gt;E-mail (Required)&lt;/label&gt;
+      &lt;input id=&quot;email-field&quot; name=&quot;email&quot; type=&quot;text&quot; <strong>class=&quot;required&quot;</strong> /&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      &lt;label for=&quot;age-field&quot;&gt;Age (Not Required)&lt;/label&gt;
+      &lt;input id=&quot;age-field&quot; name=&quot;age&quot; type=&quot;text&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+    </section>
+
+
+    <section class="style">
+      <h2>Style</h2>
+<pre><code>input[type=text].required {
+    background: white url(required_star.png) no-repeat 100% 50%;
+}
+
+input[type=text].valid {
+    background: none;
+}</code></pre>
+    </section>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="jquery.requiredstar.js"></script>
+    <script>
+      $(function() {
+        $('input').requiredStar();
+      });
+    </script>
+
+  </body>
+</html>
