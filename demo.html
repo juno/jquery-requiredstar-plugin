@@ -75,7 +75,7 @@ textarea {
 }
 
 /* styles for plugin */
-input[type=text].required, textarea.required {
+input[type=text].required, input[type=password].required, textarea.required {
     background: white url(required_star.png) no-repeat 100% 50%;
 }
 
@@ -83,7 +83,7 @@ textarea.required {
     background-position: 100% 0;
 }
 
-input[type=text].valid, textarea.valid {
+input[type=text].valid, input[type=password].valid, textarea.valid {
     background-image: none;
 }
     </style>
@@ -164,7 +164,7 @@ input[type=text].valid, textarea.valid {
 
     <section class="style">
       <h2>Style</h2>
-<pre><code>input[type=text].required, textarea.required {
+<pre><code>input[type=text].required, input[type=password].required, textarea.required {
     background: white url(required_star.png) no-repeat 100% 50%;
 }
 
@@ -172,7 +172,7 @@ textarea.required {
     background-position: 100% 0;
 }
 
-input[type=text].valid, textarea.valid {
+input[type=text].valid, input[type=password].valid, textarea.valid {
     background-image: none;
 }</code></pre>
     </section>

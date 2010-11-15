@@ -17,7 +17,7 @@ Usage
 
 ### CSS
 
-    input[type=text].required, textarea.required {
+    input[type=text].required, input[type=password].required, textarea.required {
         background: white url(required_star.png) no-repeat 100% 50%;
     }
     
@@ -25,7 +25,7 @@ Usage
         background-position: 100% 0;
     }
     
-    input[type=text].valid, textarea.valid {
+    input[type=text].valid, input[type=password].valid, textarea.valid {
         background-image: none;
     }
 
