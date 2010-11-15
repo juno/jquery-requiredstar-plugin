@@ -9,6 +9,7 @@
 
     return this.each(function() {
       if ($(this).is('.' + opts.requiredClass)) {
+        updateValidity($(this), opts); // update validity with default value
         var c = function() { updateValidity($(this), opts); };
         $(this).keypress(c).change(c);
       }

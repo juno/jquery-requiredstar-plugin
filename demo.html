@@ -110,6 +110,11 @@ input[type=text].valid, textarea.valid {
           </p>
 
           <p>
+            <label for="age-field">Age (Required)</label>
+            <input id="age-field" name="age" type="text" value="20" class="required" />
+          </p>
+
+          <p>
             <label for="comment-field">Comment (Required)</label>
             <textarea name="comment" class="required"></textarea>
           </p>
@@ -141,6 +146,11 @@ input[type=text].valid, textarea.valid {
     &lt;p&gt;
       &lt;label for=&quot;email-field&quot;&gt;E-mail (Not Required)&lt;/label&gt;
       &lt;input id=&quot;email-field&quot; name=&quot;email&quot; type=&quot;text&quot; /&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      &lt;label for=&quot;age-field&quot;&gt;Age (Required)&lt;/label&gt;
+      &lt;input id=&quot;age-field&quot; name=&quot;age&quot; type=&quot;text&quot; value=&quot;20&quot; <strong>class=&quot;required&quot;</strong> /&gt;
     &lt;/p&gt;
 
     &lt;p&gt;
