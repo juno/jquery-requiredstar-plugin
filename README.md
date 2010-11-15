@@ -1,12 +1,6 @@
 jQuery Required Star Plugin
 ====
 
-Demo & Examples
-----
-
-[http://github.com/juno/jquery-requiredstar-plugin/demo.html](http://github.com/juno/jquery-requiredstar-plugin/demo.html)
-
-
 Usage
 ----
 
