@@ -7,21 +7,26 @@ Usage
 ### Markup
 
     <input name="name" type="text" class="required" />
+    <textarea name="comment" class="required"></textarea>
 
 ### Code
 
     $(function() {
-      $('input').requiredStar();
+      $('input, textarea').requiredStar();
     });
 
 ### CSS
 
-    input[type=text].required {
+    input[type=text].required, textarea.required {
         background: white url(required_star.png) no-repeat 100% 50%;
     }
     
-    input[type=text].valid {
-        background: none;
+    textarea.required {
+        background-position: 100% 0;
+    }
+    
+    input[type=text].valid, textarea.valid {
+        background-image: none;
     }
 
 

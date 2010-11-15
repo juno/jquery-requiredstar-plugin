@@ -69,13 +69,22 @@ input[type=text] {
     padding: 5px;
 }
 
+textarea {
+    height: 5em;
+    width: 500px;
+}
+
 /* styles for plugin */
-input[type=text].required {
+input[type=text].required, textarea.required {
     background: white url(required_star.png) no-repeat 100% 50%;
 }
 
-input[type=text].valid {
-    background: none;
+textarea.required {
+    background-position: 100% 0;
+}
+
+input[type=text].valid, textarea.valid {
+    background-image: none;
 }
     </style>
   </head>
@@ -96,13 +105,13 @@ input[type=text].valid {
           </p>
 
           <p>
-            <label for="email-field">E-mail (Required)</label>
-            <input id="email-field" name="email" type="text" class="required" />
+            <label for="email-field">E-mail (Not Required)</label>
+            <input id="email-field" name="email" type="text" />
           </p>
 
           <p>
-            <label for="age-field">Age (Not Required)</label>
-            <input id="age-field" name="age" type="text" />
+            <label for="comment-field">Comment (Required)</label>
+            <textarea name="comment" class="required"></textarea>
           </p>
         </fieldset>
       </form>
@@ -112,10 +121,10 @@ input[type=text].valid {
     <section class="code">
       <h2>Code</h2>
       <pre><code>$(function() {
-  $('input').requiredStar();
+  $('input, textarea').requiredStar();
 
   // You can specify the requiredClass and validClass.
-  // $('input').requiredStar({ requiredClass: 'required', validClass: 'valid' });
+  // $('input, textarea').requiredStar({ requiredClass: 'required', validClass: 'valid' });
 });</code></pre>
     </section>
 
@@ -130,13 +139,13 @@ input[type=text].valid {
     &lt;/p&gt;
 
     &lt;p&gt;
-      &lt;label for=&quot;email-field&quot;&gt;E-mail (Required)&lt;/label&gt;
-      &lt;input id=&quot;email-field&quot; name=&quot;email&quot; type=&quot;text&quot; <strong>class=&quot;required&quot;</strong> /&gt;
+      &lt;label for=&quot;email-field&quot;&gt;E-mail (Not Required)&lt;/label&gt;
+      &lt;input id=&quot;email-field&quot; name=&quot;email&quot; type=&quot;text&quot; /&gt;
     &lt;/p&gt;
 
     &lt;p&gt;
-      &lt;label for=&quot;age-field&quot;&gt;Age (Not Required)&lt;/label&gt;
-      &lt;input id=&quot;age-field&quot; name=&quot;age&quot; type=&quot;text&quot; /&gt;
+      &lt;label for=&quot;comment-field&quot;&gt;Comment (Required)&lt;/label&gt;
+      &lt;textarea name=&quot;comment&quot; <strong>class=&quot;required&quot;</strong>&gt;&lt;/textarea&gt;
     &lt;/p&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</code></pre>
@@ -145,12 +154,16 @@ input[type=text].valid {
 
     <section class="style">
       <h2>Style</h2>
-<pre><code>input[type=text].required {
+<pre><code>input[type=text].required, textarea.required {
     background: white url(required_star.png) no-repeat 100% 50%;
 }
 
-input[type=text].valid {
-    background: none;
+textarea.required {
+    background-position: 100% 0;
+}
+
+input[type=text].valid, textarea.valid {
+    background-image: none;
 }</code></pre>
     </section>
 
@@ -159,7 +172,7 @@ input[type=text].valid {
     <script src="jquery.requiredstar.js"></script>
     <script>
       $(function() {
-        $('input').requiredStar();
+        $('input, textarea').requiredStar();
       });
     </script>
 
