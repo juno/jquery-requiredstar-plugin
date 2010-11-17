@@ -39,6 +39,13 @@ Notes
    *  Safari 5
 
 
+Changelog
+----
+
+*  v0.0.1 (Nov 17, 2010)
+   *  Initial release
+
+
 License
 ----
 
