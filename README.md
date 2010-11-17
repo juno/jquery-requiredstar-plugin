@@ -1,6 +1,10 @@
 jQuery Required Star Plugin
 ====
 
+Required Star plugin for jQuery inspired by GitHub Jobs pages.
+You can see a working demo at [http://juno.github.com/jquery-requiredstar-plugin/](http://juno.github.com/jquery-requiredstar-plugin/).
+
+
 Usage
 ----
 
