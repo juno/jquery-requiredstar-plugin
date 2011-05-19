@@ -1,6 +1,6 @@
 /*!
  * Required Star jQuery Plugin v1.0
- * @link http://github.com/junya/jquery-required-star
+ * @link https://github.com/juno/jquery-requiredstar-plugin
  * @author Junya Ogura <http://sooey.com/>
  */
 ;(function($) {
